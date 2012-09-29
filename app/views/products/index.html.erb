@@ -4,7 +4,14 @@
   console.log('the number of products is ' + '<%= @products.count %>');
 </script>
 
+<a href="#" data-hide-element = 'chart'>Chart</a>
+
+
 <script type='text/javascript'>
+  $('[data-hide-element]').on('click', function(){
+      $('#highChartContainer').toggle()
+  });
+
   $(document).ready(function() {
     chart = new Highcharts.Chart({
         chart: {
